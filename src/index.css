@@ -249,3 +249,74 @@ footer p {
 .van-tag.rugged {
   background-color: #115e59;
 }
+
+/* Van detail */
+
+.main-vanDetail .container {
+  padding-top: 2.5em;
+  padding-bottom: 5em;
+}
+
+.go-back-link:link,
+.go-back-link:visited {
+  color: #201f1d;
+  text-decoration: underline;
+  line-height: 1.375;
+}
+
+.van-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.van-details .van-tag {
+  align-self: flex-start;
+  margin-top: 3em;
+}
+
+.van-details-image {
+  margin-top: 2.5625em;
+}
+
+.van-details-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.van-details h2 {
+  font-size: 2rem;
+  margin-top: 0.625em;
+  line-height: 1.053;
+  font-weight: 500;
+}
+
+.van-details .van-details-price {
+  font-size: 1.25rem;
+}
+
+.van-details .van-details-price span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.83;
+}
+
+.van-details .van-details-description {
+  line-height: 1.5;
+  margin-top: 0.625em;
+}
+
+.van-details .van-details-btn {
+  display: block;
+  margin-top: 1.22em;
+  border: none;
+  font-size: 1.125rem;
+  line-height: 1.78;
+  color: #fff;
+  font-weight: 700;
+  background-color: #ff8c38;
+  border-radius: 5px;
+  padding: 0.25em 0;
+  cursor: pointer;
+}

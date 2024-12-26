@@ -25,7 +25,7 @@ export default function Van({ id, description, imageUrl, name, price, type }) {
 }
 
 Van.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
