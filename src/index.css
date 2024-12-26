@@ -194,6 +194,12 @@ footer p {
   max-width: 230px;
 }
 
+.van-item > a:link,
+.van-item > a:visited {
+  display: block;
+  color: #161616;
+}
+
 .van-image img {
   display: block;
   width: 100%;
@@ -205,6 +211,7 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0.625em;
 }
 
 .van-info h3 {
@@ -223,11 +230,12 @@ footer p {
 }
 
 .van-tag {
+  display: inline-block;
   line-height: 2;
   color: #fff;
   border-radius: 5px;
   font-weight: 500;
-  padding: 0.2em 0.875em;
+  padding: 0.15em 0.875em;
 }
 
 .van-tag.simple {
