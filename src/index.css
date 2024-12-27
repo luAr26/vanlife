@@ -52,8 +52,15 @@ header nav ul {
 }
 
 header nav ul li a:link,
-header hav ul li a:visited {
+header nav ul li a:visited {
   color: #4d4d4d;
+}
+
+header nav ul li a.is-active:link,
+header nav ul li a.is-active:visited {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .container {
@@ -319,4 +326,21 @@ footer p {
   border-radius: 5px;
   padding: 0.25em 0;
   cursor: pointer;
+}
+
+/* Dashboard */
+
+.dashboard-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8125em;
+  padding: 2em 0;
+}
+
+.dashboard-nav a:link,
+.dashboard-nav a:visited {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.28;
+  color: #4d4d4d;
 }

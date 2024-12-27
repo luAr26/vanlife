@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
+  function setIsActiveClass({ isActive }) {
+    return isActive ? "is-active" : null;
+  }
+
   return (
     <header>
       <div className='container'>
@@ -10,10 +14,19 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <Link to='/about'>About</Link>
+              <NavLink to='/host' className={setIsActiveClass}>
+                Host
+              </NavLink>
             </li>
             <li>
-              <Link to='/vans'>Vans</Link>
+              <NavLink to='/about' className={setIsActiveClass}>
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='/vans' className={setIsActiveClass}>
+                Vans
+              </NavLink>
             </li>
           </ul>
         </nav>

@@ -1,25 +1,37 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "../server";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import VanDetail from "./pages/VanDetail";
 import Vans from "./pages/Vans";
+import Dashboard from "./pages/host/Dashboard";
+import HostLayout from "./pages/host/HostLayout";
+import HostVanDetail from "./pages/host/HostVanDetail";
+import HostVans from "./pages/host/HostVans";
+import Income from "./pages/host/Income";
+import Reviews from "./pages/host/Reviews";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
         <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/vans' element={<Vans />}></Route>
-          <Route path='/vans/:id' element={<VanDetail />}></Route>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path='about' element={<About />}></Route>
+            <Route path='vans' element={<Vans />}></Route>
+            <Route path='vans/:id' element={<VanDetail />}></Route>
+            <Route path='host' element={<HostLayout />}>
+              <Route index element={<Dashboard />} />
+              <Route path='income' element={<Income />} />
+              <Route path='vans' element={<HostVans />} />
+              <Route path='vans/:id' element={<HostVanDetail />} />
+              <Route path='reviews' element={<Reviews />} />
+            </Route>
+          </Route>
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
   );
