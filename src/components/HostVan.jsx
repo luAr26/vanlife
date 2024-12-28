@@ -5,7 +5,7 @@ export default function HostVan({ name, price, id, imageUrl, description }) {
   return (
     <li>
       <Link
-        to={`/host/vans/${id}`}
+        to={id}
         aria-label={`View details for ${name} priced at $${price} per day`}
       >
         <img src={imageUrl} alt={description} />

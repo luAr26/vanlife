@@ -1,12 +1,21 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export default function Van({ id, description, imageUrl, name, price, type }) {
+export default function Van({
+  id,
+  description,
+  imageUrl,
+  name,
+  price,
+  type,
+  search,
+}) {
   return (
     <div className='van-item'>
       <Link
-        to={`/vans/${id}`}
+        to={id}
         aria-label={`View details for ${name} priced at $${price} per day`}
+        state={{ search }}
       >
         <div className='van-image'>
           <img src={imageUrl} alt={description} />
@@ -31,4 +40,5 @@ Van.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   type: PropTypes.string.isRequired,
+  search: PropTypes.string,
 };

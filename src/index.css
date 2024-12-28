@@ -469,3 +469,52 @@ footer p {
   font-size: 1.5rem;
   color: #161616;
 }
+
+/* Van list filter buttons */
+.van-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  margin-top: 1.5em;
+}
+
+.van-list-filter-buttons button.van-type {
+  color: #4d4d4d;
+  background-color: #ffead0;
+  border: none;
+  line-height: 2.3125;
+  padding: 0 1.6875em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.van-list-filter-buttons button.van-type.simple:hover,
+.van-list-filter-buttons button.van-type.simple:focus,
+.van-list-filter-buttons button.van-type.simple.is-active {
+  background-color: #e17654;
+  color: #fff;
+}
+
+.van-list-filter-buttons button.van-type.rugged:hover,
+.van-list-filter-buttons button.van-type.rugged:focus,
+.van-list-filter-buttons button.van-type.rugged.is-active {
+  background-color: #115e59;
+  color: #fff;
+}
+
+.van-list-filter-buttons button.van-type.luxury:hover,
+.van-list-filter-buttons button.van-type.luxury:focus,
+.van-list-filter-buttons button.van-type.luxury.is-active {
+  background-color: #161616;
+  color: #fff;
+}
+
+.van-list-filter-buttons button.clear-filters {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: #4d4d3d;
+  text-decoration: underline;
+  cursor: pointer;
+}
