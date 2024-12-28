@@ -14,7 +14,7 @@ export default function VanDetail() {
   return (
     <main className='main-vanDetail'>
       <div className='container'>
-        <Link to='/vans' className='go-back-link'>
+        <Link to='..' relative='path' className='go-back-link'>
           &larr; Back to all vans
         </Link>
         {!vanDetails ? (

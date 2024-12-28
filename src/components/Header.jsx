@@ -14,17 +14,17 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <NavLink to='/host' className={setIsActiveClass}>
+              <NavLink to='host' className={setIsActiveClass}>
                 Host
               </NavLink>
             </li>
             <li>
-              <NavLink to='/about' className={setIsActiveClass}>
+              <NavLink to='about' className={setIsActiveClass}>
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to='/vans' className={setIsActiveClass}>
+              <NavLink to='vans' className={setIsActiveClass}>
                 Vans
               </NavLink>
             </li>

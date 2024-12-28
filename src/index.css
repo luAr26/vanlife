@@ -344,3 +344,118 @@ footer p {
   line-height: 1.28;
   color: #4d4d4d;
 }
+
+/* Host vans */
+.main-host {
+  background-color: #fff7ed;
+  padding-bottom: 4.125em;
+}
+
+.main-host h2 {
+  margin-top: 0.75em;
+}
+
+.host-vans li {
+  margin-top: 1.5em;
+  background-color: #fff;
+  padding: 1.125em 1.5em;
+}
+
+.host-vans li a {
+  display: flex;
+  align-items: center;
+  gap: 1.6875em;
+}
+
+.host-vans li a:link,
+.host-vans li a:visited {
+  color: #161616;
+}
+
+.host-vans li a > img {
+  width: 66px;
+}
+
+.host-vans li a > div {
+  flex-grow: 1;
+}
+
+.host-vans li a > div h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.host-vans li a > div p {
+  color: #4d4d4d;
+}
+
+/* Host van details */
+
+.host-van-details {
+  background-color: #fff;
+  padding: 1.4375em 1.5625em;
+  border-radius: 6px;
+  margin-top: 2.3125em;
+}
+
+.host-van-details-info {
+  display: flex;
+  gap: 1.25em;
+}
+
+.host-van-details-info img {
+  width: 160px;
+  border-radius: 5px;
+}
+
+.host-van-details-info > div {
+  flex-grow: 1;
+}
+
+.host-van-details-info > div .van-tag {
+  line-height: 1.6;
+  margin-top: 1.5em;
+}
+
+.host-van-details-info > div h2 {
+  font-size: 1.625rem;
+  line-height: 1.038;
+  margin-top: 0.615em;
+}
+
+.host-van-details-info > div .host-van-price {
+  line-height: 2.25;
+}
+
+.host-van-details-info > div .host-van-price span {
+  font-weight: 700;
+}
+
+.host-van-details-tabs {
+  margin-top: 1.6875em;
+}
+
+.host-van-details-tabs ul {
+  display: flex;
+  gap: 1.375em;
+}
+
+.host-van-details-tabs ul li a:link,
+.host-van-details-tabs ul li a:visited {
+  color: #4d4d4d;
+}
+
+.host-van-details-tab-content {
+  margin-top: 1.6875em;
+}
+
+.host-van-details-tab-content p {
+  line-height: 1.375;
+  margin-top: 0.9375em;
+}
+
+.host-van-details-tab-content img {
+  display: block;
+  width: 103px;
+  border-radius: 5px;
+}
