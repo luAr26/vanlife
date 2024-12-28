@@ -459,3 +459,13 @@ footer p {
   width: 103px;
   border-radius: 5px;
 }
+
+.host-van-details-tab-content-price {
+  color: #4d4d4d;
+}
+
+.host-van-details-tab-content-price span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #161616;
+}

@@ -5,7 +5,9 @@ export default function HostVanPricing() {
   return (
     <>
       <div className='host-van-details-tab-content'>
-        <p>${hostVanDetails.price}/day</p>
+        <p className='host-van-details-tab-content-price'>
+          <span>${hostVanDetails.price.toFixed(2)}</span>/day
+        </p>
       </div>
     </>
   );
