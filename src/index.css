@@ -518,3 +518,25 @@ footer p {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.main-not-found {
+  padding: 6.5625em 0;
+}
+
+.main-not-found h2 {
+  font-size: 2rem;
+  line-height: 1.3125;
+  margin: 0;
+}
+
+.return-home-btn {
+  display: block;
+  background-color: #161616;
+  color: #fff;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.76;
+  padding: 0.67em 0;
+  margin-top: 1.67em;
+  border-radius: 5px;
+}
