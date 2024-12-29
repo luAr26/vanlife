@@ -11,7 +11,6 @@ export default function Vans() {
   const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
   const vans = useLoaderData();
-  // console.log(data);
 
   const filteredVans = !typeFilter
     ? vans

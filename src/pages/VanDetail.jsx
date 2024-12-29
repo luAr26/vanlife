@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
+import { getVanDetail } from "../utils";
+
+function loader({ params }) {
+  return getVanDetail(params.id);
+}
 
 export default function VanDetail() {
-  const { id } = useParams();
-  const [vanDetails, setVanDetails] = useState(null);
+  // const { id } = useParams();
+  // const [vanDetails, setVanDetails] = useState(null);
+  const vanDetails = useLoaderData();
   const location = useLocation();
-  console.log(location);
-
-  useEffect(() => {
-    fetch(`/api/vans/${id}`)
-      .then((res) => res.json())
-      .then((data) => setVanDetails(data.vans));
-  }, [id]);
+  // console.log(location);
 
   const search = location.state?.search || "";
   const backLinkText = search
@@ -45,3 +44,5 @@ export default function VanDetail() {
     </main>
   );
 }
+
+VanDetail.loader = loader;

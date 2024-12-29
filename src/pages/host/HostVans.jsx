@@ -1,22 +1,18 @@
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import HostVan from "../../components/HostVan";
+import { getHostVans } from "../../utils";
+
+function loader() {
+  return getHostVans();
+}
 
 export default function HostVans() {
-  const [hostVans, setHostVans] = useState([]);
-
-  useEffect(() => {
-    fetch("/api/host/vans")
-      .then((res) => res.json())
-      .then((data) => {
-        setHostVans(data.vans);
-      });
-  }, []);
-
+  const hostVans = useLoaderData();
   return (
     <>
       <h2>Your listed vans</h2>
       {hostVans.length === 0 ? (
-        <div>Loading...</div>
+        <div>No data to show...</div>
       ) : (
         <ul className='host-vans'>
           {hostVans.map((van) => (
@@ -27,3 +23,5 @@ export default function HostVans() {
     </>
   );
 }
+
+HostVans.loader = loader;

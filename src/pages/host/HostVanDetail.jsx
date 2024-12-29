@@ -1,16 +1,12 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink, Outlet, useParams } from "react-router-dom";
-import { setIsActiveStyle } from "../../utils";
+import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { getHostVanDetail, setIsActiveStyle } from "../../utils";
+
+function loader({ params }) {
+  return getHostVanDetail(params.id);
+}
 
 export default function HostVanDetail() {
-  const [hostVanDetails, setHostVanDetails] = useState(null);
-  const { id } = useParams();
-
-  useEffect(() => {
-    fetch(`/api/host/vans/${id}`)
-      .then((res) => res.json())
-      .then((data) => setHostVanDetails(data.vans[0]));
-  }, [id]);
+  const hostVanDetails = useLoaderData();
 
   return (
     <main className='main-hostVanDetail'>
@@ -56,9 +52,11 @@ export default function HostVanDetail() {
               </li>
             </ul>
           </div>
-          <Outlet context={[hostVanDetails]} />
+          <Outlet context={{ hostVanDetails }} />
         </div>
       )}
     </main>
   );
 }
+
+HostVanDetail.loader = loader;

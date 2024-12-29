@@ -29,12 +29,20 @@ const router = createBrowserRouter(
       <Route index element={<Home />}></Route>
       <Route path='about' element={<About />}></Route>
       <Route path='vans' element={<Vans />} loader={Vans.loader}></Route>
-      <Route path='vans/:id' element={<VanDetail />}></Route>
+      <Route
+        path='vans/:id'
+        element={<VanDetail />}
+        loader={VanDetail.loader}
+      ></Route>
       <Route path='host' element={<HostLayout />}>
         <Route index element={<Dashboard />} />
         <Route path='income' element={<Income />} />
-        <Route path='vans' element={<HostVans />} />
-        <Route path='vans/:id' element={<HostVanDetail />}>
+        <Route path='vans' element={<HostVans />} loader={HostVans.loader} />
+        <Route
+          path='vans/:id'
+          element={<HostVanDetail />}
+          loader={HostVanDetail.loader}
+        >
           <Route index element={<HostVanInfo />} />
           <Route path='pricing' element={<HostVanPricing />} />
           <Route path='photos' element={<HostVanPhotos />} />
