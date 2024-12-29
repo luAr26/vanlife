@@ -540,3 +540,11 @@ footer p {
   margin-top: 1.67em;
   border-radius: 5px;
 }
+
+/* ERROR component */
+.main-error {
+  padding: 3.125em 0;
+}
+.main-error p {
+  margin-top: 0.5em;
+}
