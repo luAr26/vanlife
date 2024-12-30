@@ -5,6 +5,10 @@ export default function Header() {
     return isActive ? "is-active" : null;
   }
 
+  function logout() {
+    localStorage.removeItem("loggedIn");
+  }
+
   return (
     <header>
       <div className='container'>
@@ -27,6 +31,9 @@ export default function Header() {
               <NavLink to='vans' className={setIsActiveClass}>
                 Vans
               </NavLink>
+            </li>
+            <li>
+              <button onClick={logout}>Logout</button>
             </li>
           </ul>
         </nav>

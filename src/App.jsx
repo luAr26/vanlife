@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import "../server";
+import AuthRequired from "./components/AuthRequired";
 import Error from "./components/Error";
 import Layout from "./components/Layout";
 import About from "./pages/About";
@@ -19,6 +20,7 @@ import HostVanPricing from "./pages/host/HostVanPricing";
 import HostVans from "./pages/host/HostVans";
 import Income from "./pages/host/Income";
 import Reviews from "./pages/host/Reviews";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import VanDetail from "./pages/VanDetail";
 import Vans from "./pages/Vans";
@@ -34,21 +36,25 @@ const router = createBrowserRouter(
         element={<VanDetail />}
         loader={VanDetail.loader}
       ></Route>
-      <Route path='host' element={<HostLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path='income' element={<Income />} />
-        <Route path='vans' element={<HostVans />} loader={HostVans.loader} />
-        <Route
-          path='vans/:id'
-          element={<HostVanDetail />}
-          loader={HostVanDetail.loader}
-        >
-          <Route index element={<HostVanInfo />} />
-          <Route path='pricing' element={<HostVanPricing />} />
-          <Route path='photos' element={<HostVanPhotos />} />
+
+      <Route element={<AuthRequired />}>
+        <Route path='host' element={<HostLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path='income' element={<Income />} />
+          <Route path='vans' element={<HostVans />} loader={HostVans.loader} />
+          <Route
+            path='vans/:id'
+            element={<HostVanDetail />}
+            loader={HostVanDetail.loader}
+          >
+            <Route index element={<HostVanInfo />} />
+            <Route path='pricing' element={<HostVanPricing />} />
+            <Route path='photos' element={<HostVanPhotos />} />
+          </Route>
+          <Route path='reviews' element={<Reviews />} />
         </Route>
-        <Route path='reviews' element={<Reviews />} />
       </Route>
+      <Route path='login' element={<Login />} />
       <Route path='*' element={<NotFound />}></Route>
     </Route>
   )
